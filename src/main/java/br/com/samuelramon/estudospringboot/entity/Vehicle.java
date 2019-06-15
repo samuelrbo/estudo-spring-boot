@@ -4,32 +4,26 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
+import br.com.samuelramon.estudospringboot.domain.AbstractAuditableEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="veiculos")
+@Table(name="vehicles")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Veiculo implements Serializable {
+public class Vehicle extends AbstractAuditableEntity<User, Long> implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 364248230208067544L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 	
 	@Column
 	private String name;

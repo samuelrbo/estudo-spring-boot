@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class VeiculoForm {
+public class VehicleForm {
 
 	@SuppressWarnings("unused")
 	private String name;
