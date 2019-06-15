@@ -10,6 +10,7 @@ import br.com.samuelramon.estudospringboot.domain.AbstractAuditableEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -18,13 +19,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 public class Vehicle extends AbstractAuditableEntity<User, Long> implements Serializable {
-
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 364248230208067544L;
-	
+	private static final long serialVersionUID = 9037054065824975930L;
+
 	@Column
 	private String name;
 }
